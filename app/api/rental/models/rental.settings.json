@@ -30,6 +30,11 @@
     },
     "retrieve_date": {
       "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "rentals"
     }
   }
 }
