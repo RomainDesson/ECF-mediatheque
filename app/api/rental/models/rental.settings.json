@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rentals",
+  "info": {
+    "name": "Rental",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "creation_date": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "confirmed",
+        "closed",
+        "cancelled"
+      ]
+    },
+    "book": {
+      "via": "rentals",
+      "model": "book"
+    },
+    "retrieve_date": {
+      "type": "datetime"
+    }
+  }
+}

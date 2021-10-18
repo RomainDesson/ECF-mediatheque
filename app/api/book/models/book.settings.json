@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "name": "Book",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "cover_image": {
+      "type": "string"
+    },
+    "author": {
+      "model": "author",
+      "via": "books"
+    },
+    "type": {
+      "model": "type",
+      "via": "books"
+    },
+    "rentals": {
+      "via": "book",
+      "collection": "rental"
+    },
+    "available": {
+      "type": "boolean"
+    }
+  }
+}
